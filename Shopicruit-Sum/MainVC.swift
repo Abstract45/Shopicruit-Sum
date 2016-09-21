@@ -25,7 +25,7 @@ class MainVC: UIViewController {
     
     func reloadTableView() {
         DispatchQueue.main.async {
-            self.totalLabel.text = "Total sum of all \(self.productFilterString) is \(self.sum)"
+            self.totalLabel.text = "Total sum of all \(self.productFilterString) is $ \(self.sum)"
             self.mainTableView.reloadData()
         }
     }

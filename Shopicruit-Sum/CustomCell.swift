@@ -28,7 +28,7 @@ class CustomCell: UITableViewCell {
     func configCell(item: Item) {
         productNameLabel.text = "Product Name: " + item.productName
         productTypeLabel.text = "Product Type: " + item.productType
-        productTotalPrice.text = "Total Price of all Variants: \(item.priceDouble)"
+        productTotalPrice.text = "Total Price of all Variants: $ \(item.priceDouble)"
     }
     
 }
