@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Shopicruit_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,106 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ncn-DK-SEu">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="main Cell for main view" rowHeight="87" id="2dW-9G-Vmm" customClass="CustomCell" customModule="Shopicruit_Sum" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2dW-9G-Vmm" id="qCr-Vg-Vwt">
+                                            <frame key="frameInset" width="375" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Xt8-UR-05K">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glg-Df-UWx">
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                                            <color key="textColor" red="0.028615527341941185" green="0.1284270833333333" blue="0.0099705598162656006" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXJ-Qh-ejU">
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                                            <color key="textColor" red="0.028615527341941185" green="0.1284270833333333" blue="0.0099705598162656006" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6a-Xr-85H">
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                                            <color key="textColor" red="0.028615527341941185" green="0.1284270833333333" blue="0.0099705598162656006" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Xt8-UR-05K" secondAttribute="trailing" constant="8" id="KNb-hK-0EF"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xt8-UR-05K" secondAttribute="bottom" constant="8" id="KyT-eo-AyM"/>
+                                                <constraint firstItem="Xt8-UR-05K" firstAttribute="leading" secondItem="qCr-Vg-Vwt" secondAttribute="leading" constant="8" id="aDR-iM-BkL"/>
+                                                <constraint firstItem="Xt8-UR-05K" firstAttribute="top" secondItem="qCr-Vg-Vwt" secondAttribute="top" constant="8" id="e30-PU-LR3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.9372627323272954" green="1" blue="0.92620276387903044" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="productNameLabel" destination="glg-Df-UWx" id="ce1-tq-Agm"/>
+                                            <outlet property="productTotalPrice" destination="F6a-Xr-85H" id="xuB-MP-2pe"/>
+                                            <outlet property="productTypeLabel" destination="iXJ-Qh-ejU" id="m0n-70-L0D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter Products by Product Type seperated by space" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RK8-FA-5rz">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve6-5l-sbh">
+                                <color key="backgroundColor" red="1" green="0.37407093850000001" blue="0.40664147499999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qyp-e0-eoE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Get Items With Filter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getNewItemsActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4D1-ru-ZL0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pk-Yd-ieX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3On-dr-A80"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ncn-DK-SEu" secondAttribute="trailing" id="2oy-Ku-Vnp"/>
+                            <constraint firstItem="ve6-5l-sbh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4g8-oN-WjO"/>
+                            <constraint firstItem="3pk-Yd-ieX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="74I-sG-krf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ve6-5l-sbh" secondAttribute="bottom" id="BcN-2V-qSe"/>
+                            <constraint firstAttribute="trailing" secondItem="RK8-FA-5rz" secondAttribute="trailing" id="Ec7-Re-2GC"/>
+                            <constraint firstItem="3pk-Yd-ieX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="HVH-CY-f09"/>
+                            <constraint firstAttribute="trailing" secondItem="3pk-Yd-ieX" secondAttribute="trailing" id="KhM-bN-meI"/>
+                            <constraint firstItem="RK8-FA-5rz" firstAttribute="top" secondItem="3pk-Yd-ieX" secondAttribute="bottom" id="NDU-M0-JQF"/>
+                            <constraint firstItem="ve6-5l-sbh" firstAttribute="top" secondItem="ncn-DK-SEu" secondAttribute="bottom" id="Siv-Dl-rsr"/>
+                            <constraint firstAttribute="trailing" secondItem="ve6-5l-sbh" secondAttribute="trailing" id="cC7-6R-dzl"/>
+                            <constraint firstItem="ncn-DK-SEu" firstAttribute="top" secondItem="RK8-FA-5rz" secondAttribute="bottom" id="mbJ-vf-ePy"/>
+                            <constraint firstItem="RK8-FA-5rz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pWs-nN-JUg"/>
+                            <constraint firstItem="ncn-DK-SEu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ztN-OP-3bG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="filterTextfield" destination="RK8-FA-5rz" id="voP-TX-Bn7"/>
+                        <outlet property="mainTableView" destination="ncn-DK-SEu" id="XC3-nC-OPE"/>
+                        <outlet property="totalLabel" destination="3pk-Yd-ieX" id="EHW-eH-XW9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-60" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>

@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		E82FCFD31D92190100E127C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FCFD21D92190100E127C3 /* AppDelegate.swift */; };
-		E82FCFD51D92190100E127C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FCFD41D92190100E127C3 /* ViewController.swift */; };
 		E82FCFD81D92190100E127C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82FCFD61D92190100E127C3 /* Main.storyboard */; };
 		E82FCFDA1D92190100E127C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82FCFD91D92190100E127C3 /* Assets.xcassets */; };
 		E82FCFDD1D92190100E127C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82FCFDB1D92190100E127C3 /* LaunchScreen.storyboard */; };
+		E82FCFE91D92192D00E127C3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FCFE81D92192D00E127C3 /* APIClient.swift */; };
+		E82FCFEB1D92195000E127C3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FCFEA1D92195000E127C3 /* Item.swift */; };
+		E82FCFEF1D9219FE00E127C3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FCFEE1D9219FE00E127C3 /* MainVC.swift */; };
+		E82FCFF21D921A3C00E127C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FCFF11D921A3C00E127C3 /* Constants.swift */; };
+		E82FCFF41D921B9F00E127C3 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FCFF31D921B9F00E127C3 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E82FCFCF1D92190100E127C3 /* Shopicruit-Sum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopicruit-Sum.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82FCFD21D92190100E127C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E82FCFD41D92190100E127C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E82FCFD71D92190100E127C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E82FCFD91D92190100E127C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E82FCFDC1D92190100E127C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E82FCFDE1D92190100E127C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E82FCFE81D92192D00E127C3 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E82FCFEA1D92195000E127C3 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E82FCFEE1D9219FE00E127C3 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		E82FCFF11D921A3C00E127C3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E82FCFF31D921B9F00E127C3 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,57 @@
 			isa = PBXGroup;
 			children = (
 				E82FCFD21D92190100E127C3 /* AppDelegate.swift */,
-				E82FCFD41D92190100E127C3 /* ViewController.swift */,
+				E82FCFF01D921A2B00E127C3 /* Helpers */,
+				E82FCFE71D92191F00E127C3 /* Services */,
+				E82FCFE61D92191700E127C3 /* Controller */,
+				E82FCFE51D92191300E127C3 /* View */,
+				E82FCFE41D92190D00E127C3 /* Model */,
 				E82FCFD61D92190100E127C3 /* Main.storyboard */,
 				E82FCFD91D92190100E127C3 /* Assets.xcassets */,
 				E82FCFDB1D92190100E127C3 /* LaunchScreen.storyboard */,
 				E82FCFDE1D92190100E127C3 /* Info.plist */,
 			);
 			path = "Shopicruit-Sum";
+			sourceTree = "<group>";
+		};
+		E82FCFE41D92190D00E127C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E82FCFEA1D92195000E127C3 /* Item.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E82FCFE51D92191300E127C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E82FCFF31D921B9F00E127C3 /* CustomCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E82FCFE61D92191700E127C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E82FCFEE1D9219FE00E127C3 /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E82FCFE71D92191F00E127C3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E82FCFE81D92192D00E127C3 /* APIClient.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		E82FCFF01D921A2B00E127C3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E82FCFF11D921A3C00E127C3 /* Constants.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82FCFD51D92190100E127C3 /* ViewController.swift in Sources */,
+				E82FCFF21D921A3C00E127C3 /* Constants.swift in Sources */,
 				E82FCFD31D92190100E127C3 /* AppDelegate.swift in Sources */,
+				E82FCFEF1D9219FE00E127C3 /* MainVC.swift in Sources */,
+				E82FCFEB1D92195000E127C3 /* Item.swift in Sources */,
+				E82FCFF41D921B9F00E127C3 /* CustomCell.swift in Sources */,
+				E82FCFE91D92192D00E127C3 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
